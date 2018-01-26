@@ -1,0 +1,22 @@
+{
+  "name": "pwa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vitaly-V/PWA.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vitaly-V/PWA/issues"
+  },
+  "homepage": "https://github.com/Vitaly-V/PWA#readme",
+  "dependencies": {
+    "workbox-sw": "^2.1.2"
+  }
+}
