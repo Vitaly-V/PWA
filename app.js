@@ -5,12 +5,21 @@ const defaultSource = 'the-washington-post';
 
 window.addEventListener('load', async e => {
   updateNews();
-  updateSources();
+  await updateSources();
   sourceSelector.value = defaultSource;
 
   sourceSelector.addEventListener('change', e => {
     updateNews(e.target.value);
-  })
+  });
+
+  if ('serviceWorker' in navigator) {
+    try {
+      navigator.serviceWorker.register('sw.js');
+      console.log(`SW registered`);
+    } catch (error) {
+      console.log(`SW reg failed`);
+    }
+  }
 });
 
 async function updateNews(source = defaultSource) {
